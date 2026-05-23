@@ -1,6 +1,7 @@
 import { Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { Home, Search, Sparkles, Map, User, Bell, Calendar, Navigation, Settings } from "lucide-react";
 import { OmWatermark } from "./OmWatermark";
+import logoPng from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "Home", icon: Home, exact: true },
@@ -27,7 +28,9 @@ export function AppShell() {
       <aside className="hidden lg:flex flex-col w-[240px] border-r border-border bg-sidebar sticky top-0 h-screen">
         <div className="px-5 py-6 border-b border-border">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full gradient-saffron flex items-center justify-center text-white font-serif text-xl">ॐ</div>
+            <div className="w-10 h-10 rounded-md bg-white border border-border shadow-sm flex items-center justify-center overflow-hidden">
+              <img src={logoPng} alt="OMG Logo" className="w-7 h-7 object-contain" />
+            </div>
             <div>
               <div className="font-serif text-lg font-semibold">OMG</div>
               <div className="text-[11px] text-muted-foreground -mt-0.5">Smart Temple</div>
